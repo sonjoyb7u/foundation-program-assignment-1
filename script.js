@@ -58,16 +58,19 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0)
     if(typeof(distance) === "number")
     {
         let ExtraDistance = 0;
+        let nightCharge = (50 + (waitingMinutes * 2)) * 0.2;
+        let nightChargeWithExtraDistance = 0;
         let totalFare = 0;
         if(distance > 0 && distance <= 2)
         {
             return totalFare = isNight === true 
-                                ? 50 + (waitingMinutes * 2) + ((50 + (waitingMinutes * 2)) * 0.2) 
+                                ? 50 + (waitingMinutes * 2) + nightCharge 
                                 : 50;
         } else if(distance > 2) {
             ExtraDistance = distance - 2;
+            nightChargeWithExtraDistance = (50 + (ExtraDistance * 15) + (waitingMinutes * 2)) * 0.2;
             return totalFare = isNight === true 
-                                ? 50 + (ExtraDistance * 15) + (waitingMinutes * 2) + ((50 + (ExtraDistance * 15) + (waitingMinutes * 2)) * 0.2) 
+                                ? 50 + (ExtraDistance * 15) + (waitingMinutes * 2) + nightChargeWithExtraDistance
                                 : 50 + (ExtraDistance * 15) + (waitingMinutes * 2);
         } else {
             return "Invalid input. The entire numeric value must be greater than 0!";
@@ -76,4 +79,4 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0)
         return "Invalid input, The Entire value must be numeric!";
     }
 }
-// console.log(getCngFare(-1));
+console.log(getCngFare(5, true));
