@@ -29,3 +29,23 @@ function getDayType(inputValue)
     }
 }
 // console.log(getDayType("JS"));
+
+/*
+* Question 3: Username Gatekeeper
+*/
+function validateUserName(inputValue)
+{
+    if(inputValue.length >= 4)
+    {
+        inputValue = inputValue.toLowerCase(); 
+        if(inputValue.includes("admin")) {
+            return "Reserved Word";
+        } else if(inputValue.includes(" ")) {
+            return "No Space Allowed";
+        }
+        return "Available";
+    } else if(inputValue.length < 4) {
+        return "Too Short";
+    }
+}
+// console.log(validateUserName("superadmin99"));
