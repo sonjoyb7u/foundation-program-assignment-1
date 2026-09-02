@@ -49,3 +49,31 @@ function validateUserName(inputValue)
     }
 }
 // console.log(validateUserName("superadmin99"));
+
+/*
+* Question 4: Dhaka CNG Fare Meter
+*/
+function getCngFare(distance, isNight = false, waitingMinutes = 0)
+{
+    if(typeof(distance) === "number")
+    {
+        let ExtraDistance = 0;
+        let totalFare = 0;
+        if(distance > 0 && distance <= 2)
+        {
+            return totalFare = isNight === true 
+                                ? 50 + (waitingMinutes * 2) + ((50 + (waitingMinutes * 2)) * 0.2) 
+                                : 50;
+        } else if(distance > 2) {
+            ExtraDistance = distance - 2;
+            return totalFare = isNight === true 
+                                ? 50 + (ExtraDistance * 15) + (waitingMinutes * 2) + ((50 + (ExtraDistance * 15) + (waitingMinutes * 2)) * 0.2) 
+                                : 50 + (ExtraDistance * 15) + (waitingMinutes * 2);
+        } else {
+            return "Invalid input. The entire numeric value must be greater than 0!";
+        }
+    } else {
+        return "Invalid input, The Entire value must be numeric!";
+    }
+}
+// console.log(getCngFare(-1));
