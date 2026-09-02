@@ -5,9 +5,9 @@
 * Falsy value = false, 0, -0, "", '', null, undefined, NaN
 * Truthy value = "string", " ", {}, [], "0"
 */
-function describeValue(any)
+function describeValue(anyValue)
 {
-    return `${typeof(any)} | ${any ? "truthy" : "falsy" }`;
+    return `${typeof(anyValue)} | ${anyValue ? "truthy" : "falsy" }`;
 }
 // console.log(describeValue([]));
 
