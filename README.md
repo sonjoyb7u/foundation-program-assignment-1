@@ -1,7 +1,7 @@
-Foundation-Program-Assignment-1
+# Foundation-Program-Assignment-1
 Total: 60 marks · Question 1–3 carry 10 marks each, Question 4–5 carry 15 marks each.
 
-Question 1: Value Detective · 10 marks
+## Question 1: Value Detective · 10 marks
 Write a function describeValue that takes any value and returns a string with two pieces of information joined by a space, a pipe, and another space:
 
 <type of the value> | <truthy or falsy>
@@ -22,7 +22,7 @@ describeValue(NaN) — what does typeof NaN give?
 describeValue(null) — remember the strange thing we saw in class
 Hint: you do not need a long if chain to find the type. typeof gives it to you. And a value can be put straight inside an if to test truthy or falsy.
 
-Question 2: Bangladesh Weekend Machine · 10 marks
+## Question 2: Bangladesh Weekend Machine · 10 marks
 Write a function getDayType that takes a day name and returns:
 
 Input day	Returns
@@ -40,7 +40,7 @@ getDayType("MONDAY")	"Working Day"
 getDayType("Bandarban")	"Invalid Day"
 Hint: two case lines can share one result if you do not put break between them. And a string method can fix the letter case before the switch starts.
 
-Question 3: Username Gatekeeper · 10 marks
+## Question 3: Username Gatekeeper · 10 marks
 Write a function validateUsername that takes a username and checks it against these rules, in this order:
 
 Shorter than 4 characters → return "Too Short"
@@ -59,7 +59,7 @@ validateUsername("superadmin99")	"Reserved Word"	admin is in the middle
 validateUsername("Admin_Rahim")	"Reserved Word"	capital A must also be caught
 Hint: .length, .includes(), and .toLowerCase().
 
-Question 4: Dhaka CNG Fare Meter · 15 marks
+## Question 4: Dhaka CNG Fare Meter · 15 marks
 Write a function getCngFare(distance, isNight, waitingMinutes) that returns the total fare in taka.
 
 Fare rules:
@@ -81,7 +81,7 @@ getCngFare(5, true)	114	95 + 20%
 getCngFare(5, true, 10)	138	115 + 20%
 Hint: build the fare step by step in a let variable, then apply the night charge at the very end.
 
-Question 5: Run Chase Commentator · 15 marks
+## Question 5: Run Chase Commentator · 15 marks
 Write an arrow function getChaseVerdict(target, scored, ballsLeft) for a cricket run chase.
 
 Steps:
