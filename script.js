@@ -5,7 +5,7 @@
 */
 function describeValue(any)
 {
-    return `${typeof(any)} || ${any ? "truthy" : "falsy" }`;
+    return `${typeof(any)} | ${any ? "truthy" : "falsy" }`;
 }
 
 // console.log(describeValue([]));
