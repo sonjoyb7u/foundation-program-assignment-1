@@ -106,4 +106,4 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
         }
     }
 }
-console.log(getChaseVerdict(100, 80, 12))
+// console.log(getChaseVerdict(100, 80, 12));
