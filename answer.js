@@ -1,3 +1,5 @@
+/* Foundation-Program-Assignment-1 */
+
 /*
 * Question 1: Value Detective.
 * Falsy value = false, 0, -0, "", '', null, undefined, NaN
@@ -79,4 +81,29 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0)
         return "Invalid input, The Entire value must be numeric!";
     }
 }
-console.log(getCngFare(5, true));
+// console.log(getCngFare(5, true));
+
+/*
+* Question 5: Run Chase Commentator
+*/
+const getChaseVerdict = (target, scored, ballsLeft) => {
+    let runsNeeded = target - scored;
+
+    if(runsNeeded <= 0)
+    {
+        return "Won";
+    } else if(ballsLeft <= 0) {
+        return "Lost";
+    } else {
+        let requiredRate = (runsNeeded / ballsLeft) * 6;
+        if(requiredRate <= 6)
+        {
+            return `Need ${runsNeeded} runs in ${ballsLeft} | Comfortable`;
+        } else if(requiredRate > 6 && requiredRate <= 12) {
+            return `Need ${runsNeeded} runs in ${ballsLeft} | Tough`;
+        } else if(requiredRate > 12) {
+            return `Need ${runsNeeded} runs in ${ballsLeft} | Almost Impossible`;;
+        }
+    }
+}
+console.log(getChaseVerdict(100, 80, 12))
